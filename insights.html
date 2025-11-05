@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Itz FN Consulting — Industry Insights & Blog</title>
+    <meta name="description" content="Explore the latest articles, white papers, and expert analysis on digital transformation, cloud strategy, and emerging technologies from Itz FN Consulting." />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1E40AF', // Deep Corporate Blue (Blue 800)
+              accent: '#3B82F6', // Lighter Accent Blue (Blue 500)
+              background: '#F1F5F9' // Soft Slate Gray Background
+            },
+            container: {
+              center: true,
+              padding: '1rem'
+            }
+          }
+        }
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+    </style>
+</head>
+<body class="bg-background text-slate-800">
+    
+    <!-- Header / Navigation -->
+    <header class="bg-primary text-white sticky top-0 z-50 shadow-xl">
+      <div class="container max-w-7xl flex items-center justify-between h-20">
+        <a href="index.html" class="inline-flex items-center gap-3 text-2xl font-extrabold tracking-tight">
+          <span class="inline-block h-8 w-8 rounded-full bg-accent ring-2 ring-white/50"></span>
+          <span class="hidden sm:inline">Itz FN Consulting</span>
+          <span class="sm:hidden">Itz FN</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="index.html" class="hover:text-slate-200">Home</a>
+          <a href="about.html" class="hover:text-slate-200">About</a>
+          <a href="services.html" class="hover:text-slate-200">Services</a>
+          <a href="insights.html" class="hover:text-slate-200 border-b-2 border-accent pb-1">Insights</a>
+          <a href="contact.html" class="hover:text-slate-200">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Button (Hamburger) -->
+        <button id="mobileMenuButton" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg ring-1 ring-white/30 hover:bg-white/10 focus:outline-none" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+            <path fill-rule="evenodd" d="M3.75 6.75A.75.75 0 0 1 4.5 6h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75zm0 5.25a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75zm.75 4.5a.75.75 0 0 0 0 1.5h15a.75.75 0 0 0 0-1.5h-15z" clip-rule="evenodd" />
+          </svg>
+           <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hidden h-5 w-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-primary/95 backdrop-blur supports-[backdrop-filter]:bg-primary/80">
+        <nav class="container max-w-7xl py-3 text-sm font-medium">
+          <a href="index.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Home</a>
+          <a href="about.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">About</a>
+          <a href="services.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Services</a>
+          <a href="insights.html" class="block px-3 py-2 rounded-lg bg-white/10">Insights</a>
+          <a href="contact.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+        <!-- Hero Section: Page Title and Description -->
+        <section class="bg-white border-b border-slate-200">
+            <div class="container max-w-7xl py-16 md:py-20 text-center">
+                <p class="text-sm font-semibold tracking-wider text-accent uppercase">Thought Leadership</p>
+                <h1 class="mt-2 text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+                    Industry Insights & <span class="text-accent">Expert Analysis</span>
+                </h1>
+                <p class="mt-4 text-xl text-slate-600 max-w-3xl mx-auto">
+                    Stay ahead of the curve. Our blog features strategic perspectives, technical deep dives, and market trends analysis from our senior consulting team.
+                </p>
+            </div>
+        </section>
+
+        <!-- Articles Grid Section -->
+        <section class="py-16 md:py-24 bg-background">
+            <div class="container max-w-7xl">
+                
+                <!-- Filter/Search Placeholder (future enhancement) -->
+                <div class="mb-12 flex justify-between items-center">
+                    <h2 class="text-2xl font-bold text-slate-900">Latest Articles</h2>
+                    <div class="text-sm text-slate-500">
+                        <!-- Future: <input type="search" placeholder="Search insights..." class="p-2 border rounded-lg"> -->
+                        6 Articles Displayed
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <!-- Article Card 1: Cloud Migration -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <span class="text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-2 py-1 rounded-full">Cloud Strategy</span>
+                            <h3 class="mt-4 text-xl font-bold text-slate-900 line-clamp-2">
+                                The Great Cloud Repatriation Debate: When to Bring Services Back In-House
+                            </h3>
+                            <p class="mt-3 text-sm text-slate-600 line-clamp-3">
+                                Not every workload belongs in the public cloud forever. This analysis explores the TCO, security, and performance drivers for strategic cloud repatriation...
+                            </p>
+                            <div class="mt-4 flex items-center gap-4 text-sm text-slate-500">
+                                <span class="flex items-center gap-1"><i data-lucide="calendar" class="h-4 w-4"></i> July 15, 2024</span>
+                            </div>
+                        </div>
+                        <a href="#" class="block p-4 border-t border-slate-100 text-accent font-semibold hover:bg-primary/5 rounded-b-xl transition-colors duration-300">
+                            Read Article 
+                            <i data-lucide="arrow-right" class="h-4 w-4 inline-block ml-1 align-sub"></i>
+                        </a>
+                    </div>
+
+                    <!-- Article Card 2: AI Implementation -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <span class="text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-2 py-1 rounded-full">Artificial Intelligence</span>
+                            <h3 class="mt-4 text-xl font-bold text-slate-900 line-clamp-2">
+                                Generative AI Governance: Five Steps to Responsible Implementation
+                            </h3>
+                            <p class="mt-3 text-sm text-slate-600 line-clamp-3">
+                                Deploying GenAI is fast, but governing it is complex. We outline a practical framework for mitigating risk, ensuring fairness, and achieving compliance...
+                            </p>
+                            <div class="mt-4 flex items-center gap-4 text-sm text-slate-500">
+                                <span class="flex items-center gap-1"><i data-lucide="calendar" class="h-4 w-4"></i> June 28, 2024</span>
+                            </div>
+                        </div>
+                        <a href="#" class="block p-4 border-t border-slate-100 text-accent font-semibold hover:bg-primary/5 rounded-b-xl transition-colors duration-300">
+                            Read Article 
+                            <i data-lucide="arrow-right" class="h-4 w-4 inline-block ml-1 align-sub"></i>
+                        </a>
+                    </div>
+
+                    <!-- Article Card 3: Cyber Security -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <span class="text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-2 py-1 rounded-full">Security & Risk</span>
+                            <h3 class="mt-4 text-xl font-bold text-slate-900 line-clamp-2">
+                                Zero Trust Architecture: Moving Beyond the Perimeter Defense Model
+                            </h3>
+                            <p class="mt-3 text-sm text-slate-600 line-clamp-3">
+                                The rise of remote work and complex hybrid environments requires a new security posture. Learn why Zero Trust is essential for modern enterprises...
+                            </p>
+                            <div class="mt-4 flex items-center gap-4 text-sm text-slate-500">
+                                <span class="flex items-center gap-1"><i data-lucide="calendar" class="h-4 w-4"></i> May 10, 2024</span>
+                            </div>
+                        </div>
+                        <a href="#" class="block p-4 border-t border-slate-100 text-accent font-semibold hover:bg-primary/5 rounded-b-xl transition-colors duration-300">
+                            Read Article 
+                            <i data-lucide="arrow-right" class="h-4 w-4 inline-block ml-1 align-sub"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Article Card 4: Data Strategy -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <span class="text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-2 py-1 rounded-full">Data & Analytics</span>
+                            <h3 class="mt-4 text-xl font-bold text-slate-900 line-clamp-2">
+                                Building a Data Mesh: Decentralizing Data Ownership for Speed
+                            </h3>
+                            <p class="mt-3 text-sm text-slate-600 line-clamp-3">
+                                When centralized data lakes fail to scale, the Data Mesh paradigm offers a solution. We break down the principles and challenges of implementation...
+                            </p>
+                            <div class="mt-4 flex items-center gap-4 text-sm text-slate-500">
+                                <span class="flex items-center gap-1"><i data-lucide="calendar" class="h-4 w-4"></i> April 2, 2024</span>
+                            </div>
+                        </div>
+                        <a href="#" class="block p-4 border-t border-slate-100 text-accent font-semibold hover:bg-primary/5 rounded-b-xl transition-colors duration-300">
+                            Read Article 
+                            <i data-lucide="arrow-right" class="h-4 w-4 inline-block ml-1 align-sub"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Article Card 5: Agile Transformation -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <span class="text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-2 py-1 rounded-full">Organizational Change</span>
+                            <h3 class="mt-4 text-xl font-bold text-slate-900 line-clamp-2">
+                                Beyond Scrum: Scaling Agile Practices Across the Enterprise
+                            </h3>
+                            <p class="mt-3 text-sm text-slate-600 line-clamp-3">
+                                Agile works great for a single team, but how do you scale it across hundreds? We compare SAFe, LeSS, and other scaling frameworks for large organizations...
+                            </p>
+                            <div class="mt-4 flex items-center gap-4 text-sm text-slate-500">
+                                <span class="flex items-center gap-1"><i data-lucide="calendar" class="h-4 w-4"></i> March 18, 2024</span>
+                            </div>
+                        </div>
+                        <a href="#" class="block p-4 border-t border-slate-100 text-accent font-semibold hover:bg-primary/5 rounded-b-xl transition-colors duration-300">
+                            Read Article 
+                            <i data-lucide="arrow-right" class="h-4 w-4 inline-block ml-1 align-sub"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Article Card 6: ERP Modernization -->
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <span class="text-xs font-semibold uppercase tracking-wide text-primary bg-primary/10 px-2 py-1 rounded-full">Enterprise Systems</span>
+                            <h3 class="mt-4 text-xl font-bold text-slate-900 line-clamp-2">
+                                The Roadmap to Modern ERP: Avoiding Common Implementation Pitfalls
+                            </h3>
+                            <p class="mt-3 text-sm text-slate-600 line-clamp-3">
+                                Upgrading or replacing an Enterprise Resource Planning (ERP) system is complex. Here are the key phases and decision points you must master...
+                            </p>
+                            <div class="mt-4 flex items-center gap-4 text-sm text-slate-500">
+                                <span class="flex items-center gap-1"><i data-lucide="calendar" class="h-4 w-4"></i> Feb 29, 2024</span>
+                            </div>
+                        </div>
+                        <a href="#" class="block p-4 border-t border-slate-100 text-accent font-semibold hover:bg-primary/5 rounded-b-xl transition-colors duration-300">
+                            Read Article 
+                            <i data-lucide="arrow-right" class="h-4 w-4 inline-block ml-1 align-sub"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section for Subscribers (Placeholder) -->
+        <section class="bg-white border-t border-slate-200">
+            <div class="container max-w-7xl py-16 text-center">
+                <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">
+                    Never Miss an Insight
+                </h2>
+                <p class="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">
+                    Subscribe to our monthly newsletter for a curated digest of the most critical trends in digital transformation.
+                </p>
+                <form class="mt-6 max-w-lg mx-auto flex gap-4">
+                    <input type="email" placeholder="Enter your email address" class="flex-grow p-4 border-2 border-slate-300 rounded-xl focus:ring-primary focus:border-primary" required>
+                    <button type="submit" class="bg-accent text-white font-bold px-6 py-4 rounded-xl shadow-lg hover:bg-primary transition duration-300">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="container max-w-7xl py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+            <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+                <div class="px-5 py-2">
+                    <a href="index.html" class="text-base text-gray-400 hover:text-white transition duration-150">Home</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="about.html" class="text-base text-gray-400 hover:text-white transition duration-150">About</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="services.html" class="text-base text-gray-400 hover:text-white transition duration-150">Services</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="insights.html" class="text-base text-white font-medium transition duration-150">Insights</a>
+                </div>
+                <div class="px-5 py-2">
+                    <a href="contact.html" class="text-base text-gray-400 hover:text-white transition duration-150">Contact</a>
+                </div>
+            </nav>
+            <p class="mt-8 text-center text-base text-gray-400">
+                &copy; 2024 Itz FN Consulting. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle and Lucide Icons -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle Logic
+            const menuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuIcon = document.getElementById('menuIcon');
+            const closeIcon = document.getElementById('closeIcon');
+
+            menuButton.addEventListener('click', () => {
+                const isExpanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
+                
+                // Toggle state
+                menuButton.setAttribute('aria-expanded', !isExpanded);
+                
+                // Toggle menu visibility
+                if (isExpanded) {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                } else {
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.classList.add('hidden');
+                    closeIcon.classList.remove('hidden');
+                }
+            });
+            
+            // Initialize Lucide icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>
